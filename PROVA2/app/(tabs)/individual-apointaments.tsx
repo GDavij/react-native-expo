@@ -37,7 +37,7 @@ export default function HomeScreen() {
         </View>
         <ScrollView contentContainerStyle={styles.appointementsList} >
             { apointements.map(apointment => (
-            <View style={styles.apointmentItem}>
+            <View key={"APP_" + apointment.name} style={styles.apointmentItem}>
                 <Text>{apointment.hour}</Text>
                 <Text>{apointment.name}</Text>
             </View>

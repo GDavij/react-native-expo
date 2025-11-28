@@ -81,7 +81,7 @@ export default function HomeScreen() {
             <ScrollView contentContainerStyle={styles.appointementsList} >
                 {
                     groups.map(group => (
-                        <View style={styles.apointmentGroup}>
+                        <View key={"GRP_" + group.name} style={styles.apointmentGroup}>
                             <Text style={styles.apointmentGrouptitle}>
                                 {group.name}
                             </Text>
@@ -89,7 +89,7 @@ export default function HomeScreen() {
                                 {
 
                                     group.apointements.map(apointment => (
-                                        <View style={styles.apointmentItem}>
+                                        <View key={"APP_" + apointment.name} style={styles.apointmentItem}>
                                             <Text>{apointment.hour}</Text>
                                             <Text>{apointment.name}</Text>
                                         </View>
